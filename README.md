@@ -85,7 +85,7 @@ Copy
 python main.py
 The application will start on http://127.0.0.1:8080.
 ```
-🌐 Deployment
+##🌐 Deployment
 This project is optimized for deployment on cloud platforms for accessibility during authorized tests.
 Render (Recommended)
 Push code to GitHub
@@ -114,7 +114,7 @@ Bash
 
 Copy
 cat captured_data.txt
-🔒 Security & Privacy
+##🔒 Security & Privacy
 Data Storage: Credentials are logged to console (visible in Render Logs) and optionally to captured_data.txt on local deployments. No database is used by default.
 Session Safety: Uses Flask's secure session management with secret keys to prevent tampering.
 Auto-Redirect: After capture, users are shown an error page and automatically redirected to the real Meesho website after 5 seconds.
@@ -124,24 +124,24 @@ Security Awareness Training: Show employees how Indian e-commerce phishing attac
 Red Team Exercises: Test if users verify URLs before entering phone numbers and passwords.
 Mobile Security Training: Demonstrate how mobile-centric phishing pages exploit smaller screens and different UX patterns.
 Cultural Context: Educate about region-specific phishing tactics targeting Indian users.
-📝 How the Simulation Works
+##📝 How the Simulation Works
 Landing Page: User sees Meesho-branded page with "Welcome to Meesho" or "Sign Up to view your profile"
 Phone Entry: User enters Indian mobile number (+91 country code pre-selected)
 Password Gate: System displays the entered phone number with "Change" option, asks for password
 Data Capture: Both phone and password are logged with timestamp and IP
 Error Display: Shows "Session Expired" or "Something went wrong" error
 Redirect: Automatically redirects to https://www.meesho.com after 5 seconds
-📜 License
+##📜 License
 This project is licensed under the MIT License. See the
 LICENSE
 file for details.
-🤝 Contributing
+##🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request if you have improvements for:
 Better security practices
 Enhanced educational warnings
 Additional regional e-commerce templates
 Integration with alerting systems (Slack, Email, Discord)
-📧 Contact
+##📧 Contact
 For questions regarding this project or security concerns, please open an issue on this repository.
 Created for educational purposes. Always ensure you have explicit permission before testing phishing simulations on real users.
 Stay Safe | Verify URLs | Enable 2FA
