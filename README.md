@@ -119,7 +119,7 @@ Data Storage: Credentials are logged to console (visible in Render Logs) and opt
 Session Safety: Uses Flask's secure session management with secret keys to prevent tampering.
 Auto-Redirect: After capture, users are shown an error page and automatically redirected to the real Meesho website after 5 seconds.
 No External Assets: Uses CSS-generated images and emojis to prevent broken image links.
-🎓 Educational Use Cases
+##🎓 Educational Use Cases
 Security Awareness Training: Show employees how Indian e-commerce phishing attacks look different from Western counterparts (mobile-first, phone-based).
 Red Team Exercises: Test if users verify URLs before entering phone numbers and passwords.
 Mobile Security Training: Demonstrate how mobile-centric phishing pages exploit smaller screens and different UX patterns.
