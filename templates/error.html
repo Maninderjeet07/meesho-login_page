@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Timeout - Meesho</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .error-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .error-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffebee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+            color: #c62828;
+        }
+        .error-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .error-message {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .error-code-box {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-family: monospace;
+            font-size: 13px;
+            color: #666;
+        }
+        .redirect-text {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .meesho-btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: #9c27b0;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body style="background: #fff0f0;">
+    <div class="error-container">
+        <div class="error-icon">!</div>
+        <h2 class="error-title">There was a problem</h2>
+        <p class="error-message">
+            We cannot process your request at this time due to a technical error. 
+            For your security, we are redirecting you to the Meesho homepage.
+        </p>
+        <div class="error-code-box">
+            <div>Error Code: AUTH-SESSION-TIMEOUT</div>
+            <div>Ref: <span id="ref"></span></div>
+        </div>
+        <p class="redirect-text">Redirecting in <span id="count">5</span> seconds...</p>
+        <a href="https://www.meesho.com" class="meesho-btn">Go to Meesho Now</a>
+    </div>
+
+    <script>
+        document.getElementById('ref').textContent = 
+            'MES-' + Math.random().toString(36).substring(2, 10).toUpperCase();
+        
+        let count = 5;
+        setInterval(() => {
+            count--;
+            document.getElementById('count').textContent = count;
+            if(count <= 0) window.location.href = "https://www.meesho.com";
+        }, 1000);
+    </script>
+</body>
+</html>
