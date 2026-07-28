@@ -145,20 +145,3 @@ Integration with alerting systems (Slack, Email, Discord)
 For questions regarding this project or security concerns, please open an issue on this repository.
 Created for educational purposes. Always ensure you have explicit permission before testing phishing simulations on real users.
 Stay Safe | Verify URLs | Enable 2FA
-Text
-
-Unwrap
-
-Copy
-
-**To use this:**
-
-1. Create a file named `README.md` in your project root
-2. Paste the above content
-3. Replace `<YOUR_REPOSITORY_URL>` with your actual GitHub repo URL
-4. Commit and push:
-
-```bash
-git add README.md
-git commit -m "Added comprehensive README with educational disclaimers"
-git push origin main
